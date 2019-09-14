@@ -1,0 +1,73 @@
+<script>
+        //Deklarasi Variabel
+            var name;
+            var age;
+            var address;
+            var hobbies;
+            var is_married;
+            
+            var list_school={};
+            var schoolName;
+            var schoolYear_in;
+            var schoolYear_out;
+            var schoolMajor;
+    
+            var skill={};        
+            var skillName;
+            var skillLevel;
+    
+            var interest_in_coding;
+            var biodata={};
+            
+        //Input Data
+            name='Suryani';
+            age='26';
+            address='bogor';
+            hobbies='membaca';
+            is_married=false;
+            interest_in_coding=true;
+            
+        //Data list_school    
+            schoolName='Institut Pertanian Bogor';
+            schoolYear_in=2017;
+            schoolYear_out=2019;
+            schoolMajor='PWL';
+    
+        //Data skill
+            skillName='javascript';
+            skillLevel='beginner';
+    
+        //Eksekusi Fuction
+            getListSchool(schoolName,schoolYear_in,schoolYear_out,schoolMajor);
+            getSkill(skillName,skillLevel);
+            getBiodata(name,age,address,hobbies,is_married,list_school,skill,interest_in_coding);
+    
+        
+        //cek hasil biodata
+            console.log(biodata);
+          
+        //List Function
+            function getListSchool(schoolName,schoolYear_in,schoolYear_out,schoolMajor){
+                list_school.name=schoolName;
+                list_school.year_in=schoolYear_in;
+                list_school.year_out=schoolYear_out;
+                list_school.major=schoolMajor;
+            }
+    
+            function getSkill(skillName,skillLevel){
+                skill.name=skillName;
+                skill.level=skillLevel;
+            }
+            
+            function getBiodata(name,age,address,hobbies,is_married,list_school,skill,interest_in_coding){
+                biodata.Nama=name;
+                biodata.Umur=age;
+                biodata.Alamat=address;
+                biodata.Hobi=hobbies;
+                biodata.StatusPernikahan=is_married;
+                biodata.Pendidikan=list_school;
+                biodata.Keahlian=skill;
+                biodata.MinatKoding=interest_in_coding;
+            }
+            
+    </script>

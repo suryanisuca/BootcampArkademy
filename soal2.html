@@ -1,0 +1,26 @@
+<script>
+    function is_username_valid(username){
+        var regex1 = /\w/;
+        var regex2 = /[^0-9]/;
+        
+        var check1=(username.length>4 && username.length<10);
+
+        var first = username.charAt(0);
+        var check2=regex1.test(first);
+        var check3=regex2.test(first);
+        var userOK=(check1 && check2 && check3);
+        return userOK;
+    }
+
+    function is_password_valid(password){
+        var regex3 = /[0-9]/;
+        var regex4 = /@/;
+
+        var check4=regex3.test(password);
+        var check5=regex4.test(password);
+        var check6=password.length>7;
+        
+        var passOK=(check4 && check5 && check6);
+        return passOK;
+    }
+</script>

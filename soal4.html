@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <style type='text/css'>
+                body {font-family:courier; }
+                
+                </style>
+    </head>
+    <body>
+            <div id="Gambar"></div>
+    </body>
+</html> 
+
+<script>
+        //Deklarasi variabel
+            var simbol=[];
+            var panjang;
+            
+        //Input Data
+            simbol=['*','=']
+            panjang=5;
+        
+        // Call Function    
+            cetak_gambar(panjang);
+
+        //Function
+            function cetak_gambar(panjang){
+               var hasil='';
+               var i;
+               var j;
+               var tengah;
+
+               tengah =(panjang-1)/2;
+
+               for(i=0;i<panjang;i++){
+                  if(i==tengah){
+                    for(j=0;j<panjang;j++){
+                        if(j==panjang-1){
+                            hasil=hasil+simbol[0]+'<br>'
+                        }else{
+                            hasil=hasil+simbol[0]+' '
+                        }
+                        
+                    } 
+                  }else{  
+                    for(j=0;j<panjang;j++){
+                        if (j==0 ||j==panjang-1){
+                            hasil=hasil+simbol[0];                        
+                        }else if (j==panjang-2){
+                            hasil=hasil+' '+simbol[1]+' ';
+                        }else{
+                            hasil=hasil+' '+simbol[1];
+                        }
+                        if (j==panjang-1){hasil=hasil+'<br>'}
+                    }
+                  }
+
+               } 
+                    
+
+
+
+                document.getElementById("Gambar").innerHTML = hasil;
+
+
+                //console.log(hasil);
+            }
+    
+            
+            
+    </script>

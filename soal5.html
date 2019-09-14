@@ -1,0 +1,21 @@
+<script>
+    function cetak(n){
+        var text;
+        var cek;
+        var possible = "Ab";
+        
+        for (var j = 0; j < n; j++){
+            cek=text;
+
+            text = "";
+            for (var i = 0; i < 2; i++){
+                    text += possible.charAt(Math.floor(Math.random() * possible.length));
+                }                   
+            if (text!=cek) {
+                console.log(text);
+            }else{
+                j=j-1
+            }            
+        }
+    }
+</script>
